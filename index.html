@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #header {
+      width: 100%;
+      height: 50px;
+      background-color: black;
+    }
+    #mainContainer {
+      max-width: 1350px;
+      margin: auto;
+    }
+    #iphone_14_text_container {
+      width: 100%;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #twoIphoneContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background-color: red;
+      position: relative;
+    }
+    
+    
+    
+    
+  </style>
+  <body>
+    <div id="bigContainer">
+      <div id="mainContainer">
+        <div id="header"></div>
+        <div id="iphone_14_text_container">
+          <img src="./asset/iphone14text.png" />
+        </div>
+        <div id="twoIphoneContainer">
+          <div id="battery">
+            <div style="width:150px;height:50px;">
+             <div style="background: #5BC236;width:100%;height:100%" id="batteryColorFiller"></div>
+            </div>
+            <!-- <img style="width: 100%;" src="./asset/batteryLow.png"/> -->
+            <h1>Our longest battery life ever.</h1>
+          </div>
+          <div style="position:absolute;top:0;left:-100;display: flex;flex-direction: column;justify-content: center;align-items: center;" id="left_Hand_Iphone">
+            <!-- <h1 id="Big_Text_Left_Hand_Iphone" style="font-weight: bold;color: red">Big</h1> -->
+            <img src="./asset/rightHandIphone14.jpg" />
+          </div>
+          <div style="position: absolute;top:0;right:0;" id="right_Hand_Iphone">
+            <!-- <h1 style="font-weight: bold;color: red ;transform: skew(-10deg, -15deg);position: absolute;top:30;left:40;opacity: 0;">and bigger</h1> -->
+            <img src="./asset/leftHandIphone14.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="module" src="./app.js"></script>
+%
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/BezierPlugin.min.js"></script>
+</html>
