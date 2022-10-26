@@ -535,6 +535,10 @@ function hmrAcceptRun(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _batteryLowPng = require("./asset/batteryLow.png");
 var _batteryLowPngDefault = parcelHelpers.interopDefault(_batteryLowPng);
+var _gradientBackgroundPng = require("./asset/gradientBackground.png");
+var _gradientBackgroundPngDefault = parcelHelpers.interopDefault(_gradientBackgroundPng);
+var _gradientBackgroundReversedPng = require("./asset/gradientBackgroundReversed.png");
+var _gradientBackgroundReversedPngDefault = parcelHelpers.interopDefault(_gradientBackgroundReversedPng);
 let timelineLite_Iphone14_Text = new TimelineLite();
 let iphone_14_text_container = document.getElementById("iphone_14_text_container");
 let controller_Iphone14_Text = new ScrollMagic.Controller();
@@ -545,11 +549,10 @@ timelineLite_Iphone14_Text.fromTo(iphone_14_text_container, 5, {
 });
 new ScrollMagic.Scene({
     triggerElement: iphone_14_text_container,
-    duration: 500,
+    duration: 100,
     triggerHook: 0
 }).setTween(timelineLite_Iphone14_Text).setPin(iphone_14_text_container).addTo(controller_Iphone14_Text);
 let timelineLite_LeftHand_Iphone = new TimelineLite();
-let timelineLite_RightHand_Iphone = new TimelineLite();
 let controller_Two_Iphone = new ScrollMagic.Controller();
 let twoIphoneContainer = document.getElementById("twoIphoneContainer");
 let left_Hand_Iphone = document.getElementById(`left_Hand_Iphone`);
@@ -557,11 +560,11 @@ let right_Hand_Iphone = document.getElementById(`right_Hand_Iphone`);
 let battery = document.getElementById(`battery`);
 let batteryColorFiller = document.getElementById(`batteryColorFiller`);
 let Big_Text_Left_Hand_Iphone = document.getElementById("Big_Text_Left_Hand_Iphone");
-timelineLite_LeftHand_Iphone.fromTo(left_Hand_Iphone, 8, {
+timelineLite_LeftHand_Iphone.fromTo(left_Hand_Iphone, 6, {
     transform: `translateX(0px)`
 }, {
     transform: `translateX(-2000px)`
-}).fromTo(battery, 3, {
+}).fromTo(battery, 1, {
     position: "absolute",
     left: `40%`,
     top: `150px`,
@@ -573,14 +576,14 @@ timelineLite_LeftHand_Iphone.fromTo(left_Hand_Iphone, 8, {
     transform: `perspective(10px) translate3d(42px, -62px, -835px)`
 }, {
     width: `400px`,
-    opacity: 2,
+    opacity: 1,
     top: `300px`,
     transform: `perspective(500px) matrix3d(0.785035, -0.226682, 0.436033, 0, 0, 0.821756, 0.427208, 0, -0.530612, -0.390974, 0.752058, 0, 0, 0, 0, 1) translate3d(100px, 100px, 180px)`
 }, 0).fromTo(batteryColorFiller, 3, {
     width: `0%`
 }, {
     width: `100%`
-}, 0).fromTo(right_Hand_Iphone, 8, {
+}, 0).fromTo(right_Hand_Iphone, 6, {
     transform: `translateX(0px)`
 }, {
     transform: `translateX(2000px)`
@@ -592,8 +595,27 @@ new ScrollMagic.Scene({
     duration: 1000,
     triggerHook: 0
 }).setTween(timelineLite_LeftHand_Iphone).setPin(twoIphoneContainer).addTo(controller_Two_Iphone);
+let TextcolorChangingEffect_TimelineLite = new TimelineLite();
+let textChangingColorController = new ScrollMagic.Controller();
+let textChangingColorContainer = document.getElementById("textChangingColorContainer");
+let textChangingColor = document.getElementById("textChangingColor");
+let text_changing = document.getElementById("text_changing");
+TextcolorChangingEffect_TimelineLite.fromTo(textChangingColor, 1000, {
+    // webkitTextFillColor: "transparent",
+    // webkitBackgroundClip: "text",
+    top: `50%`
+}, {
+    // webkitTextFillColor: "transparent",
+    // webkitBackgroundClip: "text",
+    top: `-100%`
+});
+new ScrollMagic.Scene({
+    triggerHook: 0,
+    duration: 1000,
+    triggerElement: textChangingColorContainer
+}).addIndicators().setTween(TextcolorChangingEffect_TimelineLite).setPin(textChangingColorContainer).addTo(textChangingColorController);
 
-},{"./asset/batteryLow.png":"9BXWo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9BXWo":[function(require,module,exports) {
+},{"./asset/batteryLow.png":"9BXWo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./asset/gradientBackground.png":"l5kC9","./asset/gradientBackgroundReversed.png":"cWROl"}],"9BXWo":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("1G2bZ") + "batteryLow.426c1b91.png" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -660,6 +682,12 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["euTuy","igcvL"], "igcvL", "parcelRequire94c2")
+},{}],"l5kC9":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("1G2bZ") + "gradientBackground.8bc61098.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"cWROl":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("1G2bZ") + "gradientBackgroundReversed.ec61aa8d.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}]},["euTuy","igcvL"], "igcvL", "parcelRequire94c2")
 
 //# sourceMappingURL=index.5baa4167.js.map

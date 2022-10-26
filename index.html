@@ -31,10 +31,6 @@
       background-color: red;
       position: relative;
     }
-    
-    
-    
-    
   </style>
   <body>
     <div id="bigContainer">
@@ -45,27 +41,89 @@
         </div>
         <div id="twoIphoneContainer">
           <div id="battery">
-            <div style="width:150px;height:50px;">
-             <div style="background: #5BC236;width:100%;height:100%" id="batteryColorFiller"></div>
+            <div style="width: 150px; height: 50px">
+              <div
+                style="background: #5bc236; width: 100%; height: 100%;"
+                id="batteryColorFiller"></div>
             </div>
             <!-- <img style="width: 100%;" src="./asset/batteryLow.png"/> -->
             <h1>Our longest battery life ever.</h1>
           </div>
-          <div style="position:absolute;top:0;left:-100;display: flex;flex-direction: column;justify-content: center;align-items: center;" id="left_Hand_Iphone">
+          <div
+            style="
+              position: absolute;
+              top: 0;
+              left: -100;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            "
+            id="left_Hand_Iphone">
             <!-- <h1 id="Big_Text_Left_Hand_Iphone" style="font-weight: bold;color: red">Big</h1> -->
             <img src="./asset/rightHandIphone14.jpg" />
           </div>
-          <div style="position: absolute;top:0;right:0;" id="right_Hand_Iphone">
+          <div
+            style="position: absolute; top: 0; right: 0"
+            id="right_Hand_Iphone">
             <!-- <h1 style="font-weight: bold;color: red ;transform: skew(-10deg, -15deg);position: absolute;top:30;left:40;opacity: 0;">and bigger</h1> -->
             <img src="./asset/leftHandIphone14.jpg" />
           </div>
+        </div>
+        <div
+          style="
+            width: 100%;
+            z-index: 200;
+            height: 100vh;
+            overflow: hidden;
+            background: black;
+            position: relative;
+          "
+          id="textChangingColorContainer">
+          <h1
+            style="
+              background-color: transparent;
+              overflow: hidden;
+              display: inline-block;
+              padding: 10px;
+              position: absolute;
+              font-weight: bold;
+              font-family: arial;
+              color: transparent;
+              font-size: 40px;
+              color: red;
+              z-index: 1000;
+              color: white;
+            "
+            id="text_changing">
+            A magical new way to interact with iPhone. Groundbreaking safety
+            features designed to save lives. An innovative 48MP camera for
+            mind-blowing detail. All powered by the ultimate smartphone chip.
+          </h1>
+          <div
+            id="textChangingColor"
+            style="
+              width: 100%;
+              display: flex;
+              z-index: 100;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              font-size: 72px;
+              height: 100%;
+              
+              background: url(./asset/gradientBackgroundReversed.png);
+               /* -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent; */
+            ">
+            </div>
         </div>
       </div>
     </div>
   </body>
 
   <script type="module" src="./app.js"></script>
-%
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
   <script
